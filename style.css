@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 50rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+.box {
+    width: 100%;
+    max-width: max-content;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    position: relative;
+    z-index: -2;
+}
+
+.background {
+    width: 100%;
+    display: block;
+    max-width: 5rem;
+    position: absolute;
+    top: 0;
+    right: 3rem;
+    z-index: -1;
+}
+
+.persons-box {
+    width: 100%;
+    max-width: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 1rem;
+}
+
+.persons-box img {
+    border: 1px white solid;
+    width: 100%;
+    max-width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.title-box {
+    width: 100%;
+    max-width: 5em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.title-box h5,
+.title-box p {
+    font-size: 0.6rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.info-box {
+    width: 100%;
+}
+
+.info-box h5 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.info-box p {
+    font-size: 0.7rem;
+    color: hsl(0, 0%, 81%);
+}
+
+.box-1 {
+    background-color: hsl(263, 55%, 52%);
+    grid-column: span 2;
+}
+
+.box-2 {
+    background-color: hsl(217, 19%, 35%);
+}
+
+.box-3 {
+    background-color: #fff;
+}
+
+.box-3 .persons-box .title-box h5,
+.box-3 .persons-box .title-box p {
+    color: hsl(217, 19%, 35%);
+}
+
+.box-3 .info-box h5,
+.box-3 .info-box p {
+    color: hsl(217, 19%, 35%);
+}
+
+.box-4 {
+    background-color: hsl(219, 29%, 14%);
+    grid-column: span 2;
+}
+.box-4 img{
+    border-color: hsl(263, 55%, 52%);
+}
+
+.box-5 {
+    background-color: #fff;
+    grid-column: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.box-5 .persons-box .title-box h5,
+.box-5 .persons-box .title-box p {
+    color: hsl(217, 19%, 35%);
+}
+
+.box-5 .info-box h5,
+.box-5 .info-box p {
+    color: hsl(217, 19%, 35%);
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        padding: 2rem 1rem;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .box {
+        margin-bottom: 1rem;
+    }
+
+    .box-5 {
+        margin-bottom: 0;
+    }
+}
